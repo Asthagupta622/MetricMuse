@@ -49,7 +49,8 @@
       fetch('https://metricmuse-2.onrender.com/analyze-text', {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json'
+          'Content-Type': 'application/json',
+          'Cache-Control': 'no-cache' 
         },
         body: JSON.stringify({ text: text })
       })
