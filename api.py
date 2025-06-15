@@ -7,6 +7,7 @@ from nltk.corpus import stopwords
 import re
 import os
 
+
 nltk.download('punkt')
 nltk.download('stopwords')
 
@@ -18,7 +19,7 @@ def add_cors_headers(response):
     origin = request.headers.get('Origin')
     allowed_origins = [
         "http://127.0.0.1:5500",  # Local dev (Live Server)
-        "https://metricmuse-frontend.netlify.app"  # Deployed Netlify frontend
+        "https://metricmuse.netlify.app"  # Deployed Netlify frontend
     ]
     if origin in allowed_origins:
         response.headers['Access-Control-Allow-Origin'] = origin
